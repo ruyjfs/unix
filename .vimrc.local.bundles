@@ -1,0 +1,3 @@
+Plug 'ryanoasis/vim-devicons'
+Plug 'qpkorr/vim-bufkill'
+Plug 'dracula/vim'

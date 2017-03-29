@@ -1,0 +1,146 @@
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+
+"Plug 'https://github.com/dracula/vim.git'
+Plug 'dracula/vim'
+
+"syntax on
+color dracula
+colorscheme dracula
+
+"-------------------------------------------------------------------------------- PLUGINS
+" Call vim-plug to manage plugins
+"call plug#begin(expand('~/.vim/plugged'))
+"call plug#begin()
+"call plug#end()
+
+"-------------------------------------------------------------------------------- HOTKEY Customized by ruyjfs
+:map ,c :BD
+":map <Alt>  <esc>
+:imap jj <Esc>
+" Colar sem identacao - Paste whitout tab
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+
+" ------------------------------------------------------------------------------- TABS 4 SPACE
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab ts=4 sw=4 ai
+set softtabstop=4
+"set expandta
+
+"****************'*************************************************************
+"" Functions
+"*****************************************************************************
+if !exists('*s:setupWrapping')
+    function s:setupWrapping()
+        set wrap
+        set wm=2
+        set textwidth=79
+    endfunction
+endif"
+
+" use 4 spaces for tabs
+set tabstop=4 softtabstop=4 shiftwidth=4
+
+" display indentation guides
+set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
+
+" convert spaces to tabs when reading file
+"autocmd! bufreadpost * set noexpandtab | retab! 4
+
+" convert tabs to spaces before writing file
+"autocmd! bufwritepre * set expandtab | retab! 4
+
+" convert spaces to tabs after writing file (to show guides again)
+"autocmd! bufwritepost * set noexpandtab | retab! 4
+
+"---------------------------------------------------------------------------------- SESSAO AUTO SAVE
+let g:session_autoload = "yes"
+let g:session_autosave = "yes"
+
+
+"---------------------------------------------------------------------------------- FONTES PARA EXTENSAO E TEMA
+"----------------------------------------------------------------------------------+ Dev-Icons
+set encoding=utf-8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+let g:airline_powerline_fonts = 1
+"----------------------------------------------------------------------------------++ Lightline Setup (Nao vi diferenca ainda)
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \ }
+      \ }
+function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+function! MyFileformat()
+    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+"----------------------------------------------------------------------------------++ Powerline Setup (Nao vi diferenca ainda)
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256)
+"----------------------------------------------------------------------------------++ Extra Theme and font PowerLine
+" https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+" testing rounded separators (extra-powerline-symbols):
+let g:airline_left_sep = "\uE0B4"
+let g:airline_right_sep = "\uE0B6"
+" set the CN (column number) symbol:
+"let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
+
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+
+
+"let g:airline_powerline_fonts=1
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
+" LIGHTLINE SETU PLUGIN FONT
+"let g:lightline = {
+"      \ 'component_function': {
+"      \   'filetype': 'MyFiletype',
+"      \   'fileformat': 'MyFileformat',
+"      \ }
+"      \ }
+"
+"function! MyFiletype()
+"    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+"endfunction
+"
+"function! MyFileformat()
+"    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+"endfunction
+
+
+" testing extra-powerline-symbols
+
+" set font:
+" for now must grab this specific one:
+" https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+
+" testing rounded separators (extra-powerline-symbols):
+"let g:airline_left_sep = "\uE0B4"
+"let g:airline_right_sep = "\uE0B6"
+
+" set the CN (column number) symbol:
+"let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+
+let g:airline_left_sep = "\uE0B4"
+let g:airline_right_sep = "\uE0B6"
+
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
+
+
+
