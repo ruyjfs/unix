@@ -43,6 +43,11 @@ apt-get install vim
     https://vim-adventures.com/
 
 
+# Install Tilda
+    sudo apt-get install tilda
+
+
+
 # Turn background vim transparent
 vim ~/.vimrc.local:
 
