@@ -17,10 +17,11 @@ All you need for a advanced unix bash
 ![Image](https://camo.githubusercontent.com/6d971fb4a462a11da0efee2206d98afeb5fffd47/687474703a2f2f692e696d6775722e636f6d2f61506d4c692e706e67)
 ## 3.2 If use custom theme, you have Install fonts-powerline and restart your pc
     apt-get install -y fonts-powerline 
-# 4.
-   [Powerline Shell](https://github.com/banga/powerline-shell)
-   [Nerd Icons](https://github.com/ryanoasis/vim-devicons)
-   [Powerline theme and font extra](https://github.com/ryanoasis/powerline-extra-symbols)
+# 4.Advanced
+   - [Powerline Shell](https://github.com/banga/powerline-shell)
+   - [Nerd Font](https://github.com/ryanoasis/nerd-fonts#patched-fonts)
+   - [Nerd Icons](https://github.com/ryanoasis/vim-devicons)
+   - [Powerline theme and font extra](https://github.com/ryanoasis/powerline-extra-symbols)
 
 # 4. Install tmux
      apt-get install -y tmux
