@@ -17,6 +17,15 @@ All you need for a advanced unix bash
 ![Image](https://camo.githubusercontent.com/6d971fb4a462a11da0efee2206d98afeb5fffd47/687474703a2f2f692e696d6775722e636f6d2f61506d4c692e706e67)
 ## 3.2 If use custom theme, you have Install fonts-powerline and restart your pc
     apt-get install -y fonts-powerline 
+```    
+apt-get install -y python python-pip
+
+git clone https://github.com/b-ryan/powerline-shell
+cd powerline-shell
+python setup.py install
+```
+
+
 # 4.Advanced
    - [Powerline Shell](https://github.com/banga/powerline-shell)
    - [Nerd Font](https://github.com/ryanoasis/nerd-fonts#patched-fonts)
