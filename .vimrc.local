@@ -1,32 +1,35 @@
-set cursorline
-set cursorcolumn
+ set cursorline
+ set cursorcolumn
 "set number relativenumber
+let NERDTreeShowHidden=1
+ autocmd ColorScheme * highlight WhiteSpaces gui=undercurl guifg=LightGray | match WhiteSpaces / \+/
 
-autocmd ColorScheme * highlight WhiteSpaces gui=undercurl guifg=LightGray | match WhiteSpaces / \+/
-
+" Show number lines dynamic
 "augroup numbertoggle
 "  autocmd!
 "  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 "  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 "augroup END
 
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
 
-"Plug 'https://github.com/dracula/vim.git'
-Plug 'dracula/vim'
+
 
 "syntax on
-color dracula
-colorscheme dracula
+ color dracula
+ colorscheme dracula
 
 "-------------------------------------------------------------------------------- PLUGINS
 " Call vim-plug to manage plugins
 "call plug#begin(expand('~/.vim/plugged'))
+"call plug#begin('~/.vim/plugged')
 "call plug#begin()
+" Plug 'https://github.com/dracula/vim.git'
+"Plug 'dracula/vim'
 "call plug#end()
 
-"-------------------------------------------------------------------------------- HOTKEY Customized by ruyjfs
+"-------------------------------------------------------------------------------- HOTKEY Customized by ryubr 
 :map ,c :BD
 ":map <Alt>  <esc>
 :imap jj <Esc>
@@ -47,13 +50,13 @@ set softtabstop=4
 "****************'*************************************************************
 "" Functions
 "*****************************************************************************
-if !exists('*s:setupWrapping')
-    function s:setupWrapping()
-        set wrap
-        set wm=2
-        set textwidth=79
-    endfunction
-endif"
+" if !exists('*s:setupWrapping')
+"     function s:setupWrapping()
+"         set wrap
+"         set wm=2
+"         set textwidth=79
+"     endfunction
+" endif"
 
 " use 4 spaces for tabs
 set tabstop=4 softtabstop=4 shiftwidth=4
@@ -71,8 +74,8 @@ set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
 "autocmd! bufwritepost * set noexpandtab | retab! 4
 
 "---------------------------------------------------------------------------------- SESSAO AUTO SAVE
-let g:session_autoload = "yes"
-let g:session_autosave = "yes"
+ let g:session_autoload = "yes"
+ let g:session_autosave = "yes"
 
 
 "---------------------------------------------------------------------------------- FONTES PARA EXTENSAO E TEMA
