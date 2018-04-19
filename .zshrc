@@ -16,3 +16,8 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
+alias ll='ls -la'
+alias ..='cd ..'
+alias da='docker attach'
+alias ds='docker start'

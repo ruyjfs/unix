@@ -1,8 +1,8 @@
- set cursorline
- set cursorcolumn
+ " set cursorline
+ " set cursorcolumn
 "set number relativenumber
 let NERDTreeShowHidden=1
- autocmd ColorScheme * highlight WhiteSpaces gui=undercurl guifg=LightGray | match WhiteSpaces / \+/
+ " autocmd ColorScheme * highlight WhiteSpaces gui=undercurl guifg=LightGray | match WhiteSpaces / \+/
 
 " Show number lines dynamic
 "augroup numbertoggle
@@ -40,11 +40,11 @@ set showmode
 
 
 " ------------------------------------------------------------------------------- TABS 4 SPACE
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab ts=4 sw=4 ai
-set softtabstop=4
+" set smartindent
+" set tabstop=4
+" set shiftwidth=4
+" set expandtab ts=4 sw=4 ai
+" set softtabstop=4
 "set expandta
 
 "****************'*************************************************************
@@ -74,15 +74,15 @@ set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
 "autocmd! bufwritepost * set noexpandtab | retab! 4
 
 "---------------------------------------------------------------------------------- SESSAO AUTO SAVE
- let g:session_autoload = "yes"
- let g:session_autosave = "yes"
+ " let g:session_autoload = "yes"
+ " let g:session_autosave = "yes"
 
 
 "---------------------------------------------------------------------------------- FONTES PARA EXTENSAO E TEMA
 "----------------------------------------------------------------------------------+ Dev-Icons
-set encoding=utf-8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-let g:airline_powerline_fonts = 1
+" set encoding=utf-8
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+" let g:airline_powerline_fonts = 1
 "----------------------------------------------------------------------------------++ Lightline Setup (Nao vi diferenca ainda)
 let g:lightline = {
       \ 'component_function': {
@@ -90,10 +90,10 @@ let g:lightline = {
       \   'fileformat': 'MyFileformat',
       \ }
       \ }
-function! MyFiletype()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-function! MyFileformat()
+ function! MyFiletype()
+     return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+ endfunction
+ function! MyFileformat()
     return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 "----------------------------------------------------------------------------------++ Powerline Setup (Nao vi diferenca ainda)
@@ -105,57 +105,44 @@ set t_Co=256)
 "----------------------------------------------------------------------------------++ Extra Theme and font PowerLine
 " https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
-" testing rounded separators (extra-powerline-symbols):
-let g:airline_left_sep = "\uE0B4"
-let g:airline_right_sep = "\uE0B6"
-" set the CN (column number) symbol:
-"let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
 
-
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
-
-
-"let g:airline_powerline_fonts=1
-"let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+let g:airline_powerline_fonts=1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 
 " LIGHTLINE SETU PLUGIN FONT
-"let g:lightline = {
-"      \ 'component_function': {
-"      \   'filetype': 'MyFiletype',
-"      \   'fileformat': 'MyFileformat',
-"      \ }
-"      \ }
-"
-"function! MyFiletype()
-"    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-"endfunction
-"
-"function! MyFileformat()
-"    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-"endfunction
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \ }
+      \ }
 
+function! MyFiletype()
+   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 " testing extra-powerline-symbols
 
 " set font:
 " for now must grab this specific one:
 " https://github.com/ryanoasis/powerline-extra-symbols/blob/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ Regular
+
+" testing extra-powerline-symbols
+
+" set font terminal font or set gui vim font
+" to a Nerd Font (https://github.com/ryanoasis/nerd-fonts):
+" set guifont=DroidSansMono\ Nerd\ Font\ 12
 
 " testing rounded separators (extra-powerline-symbols):
-"let g:airline_left_sep = "\uE0B4"
-"let g:airline_right_sep = "\uE0B6"
-
-" set the CN (column number) symbol:
-"let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
-
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12
-
 let g:airline_left_sep = "\uE0B4"
 let g:airline_right_sep = "\uE0B6"
 
+" set the CN (column number) symbol:
 let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
-
-
 
 
