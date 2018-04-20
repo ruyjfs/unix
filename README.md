@@ -1,7 +1,7 @@
 # unix
 All you need for a advanced unix bash
 
-# 1. Install Git
+# 1. Install Git - Needed for plugins
     apt-get install -y git
 # 2. Install VIM
     apt-get install -y vim
