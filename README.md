@@ -26,15 +26,15 @@ python setup.py install
 ```
 
 
-# 4.Advanced
+# 4. Advanced
    - [Powerline Shell](https://github.com/banga/powerline-shell)
    - [Nerd Font](https://github.com/ryanoasis/nerd-fonts#patched-fonts)
    - [Nerd Icons](https://github.com/ryanoasis/vim-devicons)
    - [Powerline theme and font extra](https://github.com/ryanoasis/powerline-extra-symbols)
 
-# 4. Install tmux
+# 4. Install tmux - Tmux is like terminator but without using graphical interface, it divides the screens directly into the terminal
      apt-get install -y tmux
-## Put code of tmux.conf in this gist on your ~/.tmux.conf.
+## My hotkeys configuration - Put code of tmux.conf in this gist on your ~/.tmux.conf.
 
     vim ~/.tmux.conf
 ## Reloading tmux config
@@ -45,15 +45,12 @@ python setup.py install
 
     https://github.com/tmux-plugins
     
-# Install VIM
-apt-get install vim
 
-# Links
-    http://www.vim-bootstrap.com/
-    https://vim-adventures.com/
+# Links:
+- [https://vim-adventures.com/](https://vim-adventures.com/) - For vim begginers
 
 
-# Install Tilda
+# Install Tilda - Is a terminal with scroll of top
     sudo apt-get install tilda
 
 
