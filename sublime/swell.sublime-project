@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"name": "Swell",
+			"path": "/var/www/swell-laravel",
+			"folder_exclude_patterns": ["node_modules", "vendor", "public", "storage"]
+		}
+	]
+}
+
