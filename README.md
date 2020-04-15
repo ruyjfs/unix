@@ -24,6 +24,8 @@ git clone https://github.com/b-ryan/powerline-shell
 cd powerline-shell
 python setup.py install
 ```
+## 3.3 Install Auto Suggestion
+[ZSH Auto Suggestion](https://github.com/zsh-users/zsh-autosuggestions)
 
 
 # 4. Advanced
